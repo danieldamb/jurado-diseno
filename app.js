@@ -50,6 +50,7 @@ award("Uso del color","🎨",3),
 ]
 }
 function openResults(){try{if(!S.session)return toast("No hay una sesión activa");results()}catch(e){console.error("Resultados:",e);toast("No fue posible mostrar los resultados: "+(e?.message||e))}}
+async function openResults(){try{const snap=await get(ref(db,"sessions/"+S.code));if(!snap.exists()){toast("No se encontraron los datos de la sesión");return}S.session=snap.val();results()}catch(e){console.error("Resultados:",e);toast("No fue posible mostrar los resultados")}}
 function results(){
 S.mode="results";
 const s=S.session||{},ps=Object.values(s.pieces||{}),students=s.students||{},v=s.votes||{},tv=s.teacherVotes||{};
