@@ -40,7 +40,7 @@ return{p,i,score:criterion(i,criterionIndex),n:vs.length,owner}
 }).filter(x=>x.n>0&&x.score>0).sort((a,b)=>b.score-a.score);
 return{label,icon,item:candidates[0]||null}
 };
-const favorite=scores.find(x=>x.n>0)||null;
+const favorite=scores.find(x=>x.n>0)?{...scores.find(x=>x.n>0),score:scores.find(x=>x.n>0).avg}:null;
 return[
 award("Concepto destacado","💡",0),
 award("Solución tipográfica","✒️",2),
