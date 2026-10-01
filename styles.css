@@ -47,3 +47,23 @@
 #main:fullscreen .hero{max-width:1400px;margin:0 auto 28px}
 #main:fullscreen .card{max-width:1400px;margin-left:auto;margin-right:auto}
 #main:fullscreen:after{content:"Esc · salir de pantalla completa";position:fixed;right:18px;bottom:14px;color:#aaa;font-size:12px;background:#111b;padding:7px 10px;border-radius:8px}
+
+/* Presentación docente persistente: la misma superficie fullscreen continúa al mostrar resultados. */
+#main.dashboard-view:fullscreen{min-height:100vh;width:100vw;box-sizing:border-box;overflow:hidden;background:#08080a;padding:24px 4vw;display:block;border:0;border-radius:0}
+#main.dashboard-view:fullscreen .hero,
+#main.dashboard-view:fullscreen .grid> .half,
+#main.dashboard-view:fullscreen .grid> .card:not(#projectionCard){display:none}
+#main.dashboard-view:fullscreen .grid{display:block;height:100%;margin:0}
+#main.dashboard-view:fullscreen #projectionCard{display:block;max-width:none;width:100%;height:100%;box-sizing:border-box;margin:0;padding:18px 22px;background:#101014;border:1px solid #2a2a32}
+#main.dashboard-view:fullscreen #projection{height:calc(100vh - 92px);min-height:0;border:0;background:#050506;border-radius:18px;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:18px 24px;box-sizing:border-box}
+#main.dashboard-view:fullscreen #projection .projection-content{flex:1;min-height:0}
+#main.dashboard-view:fullscreen #projection .projection-content img{max-width:96%;max-height:calc(100vh - 250px);width:auto;height:auto;object-fit:contain}
+#main.dashboard-view:fullscreen #projection .projection-meta{display:block;text-align:center}
+#main.dashboard-view:fullscreen #projection .projection-controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+#main.dashboard-view:fullscreen #projection .projection-controls .btn{font-size:14px;padding:10px 16px}
+#main.dashboard-view:fullscreen #projection .projection-controls .btn:disabled{opacity:.35;cursor:not-allowed}
+#main.dashboard-view:fullscreen:after{content:"Esc · salir de pantalla completa";position:fixed;right:18px;bottom:14px;color:#aaa;font-size:12px;background:#111b;padding:7px 10px;border-radius:8px}
+#main.results-view:fullscreen{min-height:100vh;width:100vw;box-sizing:border-box;overflow:auto;background:#08080a;padding:28px 5vw;display:block;border:0;border-radius:0}
+#main.results-view:fullscreen .hero{max-width:1400px;margin:0 auto 28px}
+#main.results-view:fullscreen .card{max-width:1400px;margin-left:auto;margin-right:auto}
+#main.results-view:fullscreen:after{content:"Esc · salir de pantalla completa";position:fixed;right:18px;bottom:14px;color:#aaa;font-size:12px;background:#111b;padding:7px 10px;border-radius:8px}
