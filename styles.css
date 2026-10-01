@@ -279,3 +279,65 @@
 #main.dashboard-view:fullscreen #projection .projection-stats{
   margin-top:3px;
 }
+
+/* v33: zona inferior fullscreen sin superposición */
+#main.dashboard-view:fullscreen #projection .projection-meta{
+  position:fixed;
+  left:50%;
+  bottom:92px;
+  transform:translateX(-50%);
+  z-index:20;
+  width:auto;
+  min-width:420px;
+  max-width:88vw;
+  padding:4px 14px;
+  background:rgba(5,5,6,.92);
+  border:1px solid #2a2a32;
+  border-radius:12px;
+  box-sizing:border-box;
+}
+#main.dashboard-view:fullscreen #projection .projection-title{
+  line-height:1.05;
+}
+#main.dashboard-view:fullscreen #projection .projection-progress{
+  line-height:1.1;
+  margin-top:2px;
+}
+#main.dashboard-view:fullscreen #projection .projection-stats{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  margin-top:4px;
+  white-space:nowrap;
+}
+#main.dashboard-view:fullscreen #projection .projection-stats span{
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
+}
+#main.dashboard-view:fullscreen #projection .projection-controls{
+  position:fixed;
+  left:50%;
+  bottom:16px;
+  transform:translateX(-50%);
+  z-index:50;
+  width:max-content;
+  min-width:0;
+  max-width:90vw;
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin:0;
+  padding:7px;
+  background:rgba(16,16,20,.98);
+  border:1px solid #303038;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,.45);
+}
+#main.dashboard-view:fullscreen #projection .projection-controls .btn{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
