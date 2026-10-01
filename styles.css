@@ -370,3 +370,60 @@
   z-index:100;
   padding:8px;
 }
+
+/* v40: barra de información arriba y controles abajo, sin superposición en fullscreen */
+#main.dashboard-view:fullscreen #projection .projection-meta{
+  position:fixed;
+  left:50%;
+  top:18px;
+  bottom:auto;
+  transform:translateX(-50%);
+  z-index:40;
+  width:auto;
+  min-width:520px;
+  max-width:88vw;
+  padding:6px 16px 8px;
+  box-sizing:border-box;
+  background:rgba(5,5,6,.92);
+  border:1px solid #2a2a32;
+  border-radius:12px;
+  backdrop-filter:blur(10px);
+}
+#main.dashboard-view:fullscreen #projection .projection-controls{
+  position:fixed;
+  left:50%;
+  top:auto;
+  bottom:18px;
+  transform:translateX(-50%);
+  z-index:100;
+  width:max-content;
+  min-width:0;
+  max-width:90vw;
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin:0;
+  padding:8px;
+  background:rgba(16,16,20,.98);
+  border:1px solid #303038;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,.45);
+}
+#main.dashboard-view:fullscreen #projection .projection-content img{
+  max-height:calc(100vh - 260px);
+}
+@media (max-height:700px){
+  #main.dashboard-view:fullscreen #projection .projection-meta{
+    top:10px;
+    padding:4px 12px 6px;
+  }
+  #main.dashboard-view:fullscreen #projection .projection-title{font-size:16px}
+  #main.dashboard-view:fullscreen #projection .projection-progress{font-size:11px}
+  #main.dashboard-view:fullscreen #projection .projection-stats{gap:5px;margin-top:2px}
+  #main.dashboard-view:fullscreen #projection .projection-stats span{padding:7px 10px;font-size:11px}
+  #main.dashboard-view:fullscreen #projection .projection-controls{bottom:10px;padding:6px}
+  #main.dashboard-view:fullscreen #projection .projection-controls .btn{font-size:12px;padding:8px 12px}
+  #main.dashboard-view:fullscreen #projection .projection-content img{max-height:calc(100vh - 190px)}
+}
