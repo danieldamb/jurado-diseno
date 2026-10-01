@@ -357,3 +357,16 @@
   bottom:16px;
   gap:8px;
 }
+
+/* v38: separar definitivamente metadatos y controles en pantalla completa */
+#main.dashboard-view:fullscreen #projection .projection-meta{
+  bottom:170px;
+  min-width:520px;
+  max-width:88vw;
+  padding:6px 16px 8px;
+}
+#main.dashboard-view:fullscreen #projection .projection-controls{
+  bottom:18px;
+  z-index:100;
+  padding:8px;
+}
