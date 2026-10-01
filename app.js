@@ -49,7 +49,7 @@ award("Uso del color","🎨",3),
 {label:"Favorito del público",icon:"👏",item:favorite}
 ]
 }
-function openResults(){try{if(!S.code||!S.session)return toast("No hay una sesión activa");const wasFullscreen=!!document.fullscreenElement;results();if(wasFullscreen){requestAnimationFrame(()=>{const host=$("#main");if(host?.requestFullscreen)host.requestFullscreen().catch(()=>{})})}}catch(e){console.error("Resultados:",e);toast("Error al abrir resultados: "+(e?.message||"error"))}}
+function openResults(){try{if(!S.code||!S.session)return toast("No hay una sesión activa");const wasFullscreen=!!document.fullscreenElement;results();if(wasFullscreen){const host=$("#main");if(host?.requestFullscreen)host.requestFullscreen().catch(()=>{})}}catch(e){console.error("Resultados:",e);toast("Error al abrir resultados: "+(e?.message||"error"))}}
 function results(){
 S.mode="results";
 const s=S.session||{},ps=Object.values(s.pieces||{}),students=s.students||{},v=s.votes||{},tv=s.teacherVotes||{};
