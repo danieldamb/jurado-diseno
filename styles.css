@@ -111,3 +111,22 @@
   margin-top:6px;
   padding-bottom:2px;
 }
+
+/* Fullscreen viewport final adjustment */
+#main.dashboard-view:fullscreen #projectionCard{
+  height:calc(100vh - 32px);
+  max-height:calc(100vh - 32px);
+}
+#main.dashboard-view:fullscreen #projection{
+  height:calc(100vh - 56px);
+  max-height:calc(100vh - 56px);
+}
+#main.dashboard-view:fullscreen #projection .projection-content img{
+  max-height:calc(100vh - 340px);
+}
+#main.dashboard-view:fullscreen #projection .projection-controls{
+  position:relative;
+  z-index:2;
+  flex-shrink:0;
+  margin-bottom:0;
+}
