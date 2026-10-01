@@ -266,3 +266,16 @@
   font-size:13px;
   padding:9px 14px;
 }
+
+/* v32: separar definitivamente información y controles en fullscreen */
+#main.dashboard-view:fullscreen #projection .projection-meta{
+  bottom:104px;
+  width:min(1100px,88vw);
+  padding:6px 14px 8px;
+}
+#main.dashboard-view:fullscreen #projection .projection-controls{
+  bottom:14px;
+}
+#main.dashboard-view:fullscreen #projection .projection-stats{
+  margin-top:3px;
+}
