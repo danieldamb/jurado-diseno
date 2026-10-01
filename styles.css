@@ -341,3 +341,19 @@
   flex:0 0 auto;
   white-space:nowrap;
 }
+
+/* v34: separar completamente estadísticas y controles */
+#main.dashboard-view:fullscreen #projection .projection-meta{
+  bottom:132px;
+  min-width:420px;
+  width:auto;
+  max-width:88vw;
+}
+#main.dashboard-view:fullscreen #projection .projection-stats{
+  margin-top:3px;
+  gap:6px;
+}
+#main.dashboard-view:fullscreen #projection .projection-controls{
+  bottom:16px;
+  gap:8px;
+}
