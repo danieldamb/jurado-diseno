@@ -40,3 +40,10 @@
   .code{font-size:48px}
   .card{border-radius:18px;padding:15px}
 }
+
+.star.half{color:transparent;background:linear-gradient(90deg,var(--accent) 50%,#555761 50%);-webkit-background-clip:text;background-clip:text}
+.star.on{color:var(--accent)}
+#main:fullscreen{min-height:100vh;width:100vw;overflow:auto;background:#08080a;padding:4vh 5vw;display:block;border:0;border-radius:0}
+#main:fullscreen .hero{max-width:1400px;margin:0 auto 28px}
+#main:fullscreen .card{max-width:1400px;margin-left:auto;margin-right:auto}
+#main:fullscreen:after{content:"Esc · salir de pantalla completa";position:fixed;right:18px;bottom:14px;color:#aaa;font-size:12px;background:#111b;padding:7px 10px;border-radius:8px}
